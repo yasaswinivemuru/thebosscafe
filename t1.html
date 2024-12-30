@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boss Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .menu-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu-section summary {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+        .menu-category {
+            margin: 1rem 0;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 1rem;
+        }
+        .menu-item span {
+            font-weight: bold;
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Boss Cafe</h1>
+        <p>Eat Like a Boss, Live Like a Boss</p>
+    </header>
+    <nav>
+        <a href="#chinese">Chinese</a>
+        <a href="#pizza">Pizza</a>
+        <a href="#tea-coffee">Tea & Coffee</a>
+    </nav>
+    <div class="menu-section" id="chinese">
+        <details>
+            <summary>Chinese</summary>
+            <div class="menu-category">
+                <div class="menu-item">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.1FJpYbgWkvNg--4_i7RtNQHaK1&pid=Api&P=0&h=180" alt="Noodles">
+                    <span>Noodles</span>
+                    <span>50/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.Crh43O7cPcTpgT7N2_KcFgHaLH&pid=Api&P=0&h=180" alt="Hakka Noodles">
+                    <span>Hakka Noodles</span>
+                    <span>50/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.fti4pKkogPBQl_KND4ooUAHaHa&pid=Api&P=0&h=180" alt="Fried Rice">
+                    <span>Fried Rice</span>
+                    <span>70/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.eb9afEHuE53YID9XHDku_wHaHa&pid=Api&P=0&h=180" alt="Manchurian">
+                    <span>Manchurian</span>
+                    <span>70/-</span>
+                </div>
+            </div>
+        </details>
+    </div>
+    <div class="menu-section" id="pizza">
+        <details>
+            <summary>Pizza</summary>
+            <div class="menu-category">
+                <div class="menu-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.Vwv_VH7HPjovTIFQ1yikHgHaE7&pid=Api&P=0&h=180" alt="Onion Pizza">
+                    <span>Onion Pizza (6 Inch)</span>
+                    <span>60/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.PnIO28ZPagK7cCIyhiDhPwHaGB&pid=Api&P=0&h=180" alt="Tomato Pizza">
+                    <span>Tomato Pizza (6 Inch)</span>
+                    <span>60/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/tex-mex-corn-capsicum-pizza-b7fddcb5.jpg" alt="Capsicum Pizza">
+                    <span>Capsicum Pizza (6 Inch)</span>
+                    <span>60/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.nxE6PluUyts0y6lxkZW1dwHaE8&pid=Api&P=0&h=180" alt="Cheese Burst Pizza">
+                    <span>Cheese Burst Pizza (6 Inch)</span>
+                    <span>130/-</span>
+                </div>
+            </div>
+        </details>
+    </div>
+    <div class="menu-section" id="tea-coffee">
+        <details>
+            <summary>Tea & Coffee</summary>
+            <div class="menu-category">
+                <div class="menu-item">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.rK0NNo8BX-VOW51hYvGa6wHaHa&pid=Api&P=0&h=180" alt="Ginger Tea">
+                    <span>Ginger Tea</span>
+                    <span>10/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.6O8HQq22SgesKR_d17osbAHaH4&pid=Api&P=0&h=180" alt="Chocolate Tea">
+                    <span>Chocolate Tea</span>
+                    <span>10/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.6p_YSXP0RASbvpk5Q2ELGQHaFj&pid=Api&P=0&h=180" alt="Hot Coffee">
+                    <span>Hot Coffee</span>
+                    <span>20/-</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.awzDrZu8VfZNt5Uy8x5B5QHaLT&pid=Api&P=0&h=180" alt="Cold Coffee">
+                    <span>Cold Coffee</span>
+                    <span>50/-</span>
+                </div>
+            </div>
+        </details>
+    </div>
+    <footer>
+        &copy; 2024 The Boss Cafe. All Rights Reserved.
+    </footer>
+</body>
+</html>
