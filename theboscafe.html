@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boss Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu-section {
+            flex: 1;
+            padding: 1rem;
+        }
+        .summary-section {
+            flex: 1;
+            padding: 1rem;
+            border-left: 1px solid #ddd;
+        }
+        .menu-section h2,
+        .summary-section h2 {
+            text-align: center;
+            color: #333;
+        }
+        .menu-category {
+            margin-bottom: 2rem;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item span {
+            font-weight: bold;
+            color: #333;
+        }
+        .menu-item button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.8rem;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .menu-item button:hover {
+            background-color: #555;
+        }
+        .summary-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .summary-section li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .summary-section .total {
+            font-weight: bold;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+            display: none; /* Initially hidden */
+        }
+        .thank-you-message {
+            text-align: center;
+            margin-top: 1rem;
+            color: green;
+            font-weight: bold;
+            display: none; /* Initially hidden */
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        .show-total-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 1rem auto;
+            display: block;
+            text-align: center;
+        }
+        .show-total-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Boss Cafe</h1>
+        <p>Eat Like a Boss, Live Like a Boss</p>
+    </header>
+    <nav>
+        <a href="#chinese">Chinese</a>
+        <a href="#pizza">Pizza</a>
+        <a href="#tea-coffee">Tea & Coffee</a>
+    </nav>
+    <div class="container">
+        <!-- Menu Section -->
+        <div class="menu-section">
+            <h2>Menu</h2>
+            <div class="menu-category" id="chinese">
+                <h3>Chinese</h3>
+                <div class="menu-item">
+                    <span>Noodles</span>
+                    <span>50/-</span>
+                    <button onclick="addItem('Noodles', 50)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Hakka Noodles</span>
+                    <span>50/-</span>
+                    <button onclick="addItem('Hakka Noodles', 50)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Fried Rice</span>
+                    <span>70/-</span>
+                    <button onclick="addItem('Fried Rice', 70)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Manchurian</span>
+                    <span>70/-</span>
+                    <button onclick="addItem('Manchurian', 70)">Add Item</button>
+                </div>
+            </div>
+            <div class="menu-category" id="pizza">
+                <h3>Pizza</h3>
+                <div class="menu-item">
+                    <span>Onion Pizza (6 Inch)</span>
+                    <span>60/-</span>
+                    <button onclick="addItem('Onion Pizza', 60)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Tomato Pizza (6 Inch)</span>
+                    <span>60/-</span>
+                    <button onclick="addItem('Tomato Pizza', 60)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Capsicum Pizza (6 Inch)</span>
+                    <span>60/-</span>
+                    <button onclick="addItem('Capsicum Pizza', 60)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Cheese Burst Pizza (6 Inch)</span>
+                    <span>130/-</span>
+                    <button onclick="addItem('Cheese Burst Pizza', 130)">Add Item</button>
+                </div>
+            </div>
+            <div class="menu-category" id="tea-coffee">
+                <h3>Tea & Coffee</h3>
+                <div class="menu-item">
+                    <span>Ginger Tea</span>
+                    <span>10/-</span>
+                    <button onclick="addItem('Ginger Tea', 10)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Chocolate Tea</span>
+                    <span>10/-</span>
+                    <button onclick="addItem('Chocolate Tea', 10)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Hot Coffee</span>
+                    <span>20/-</span>
+                    <button onclick="addItem('Hot Coffee', 20)">Add Item</button>
+                </div>
+                <div class="menu-item">
+                    <span>Cold Coffee</span>
+                    <span>50/-</span>
+                    <button onclick="addItem('Cold Coffee', 50)">Add Item</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="summary-section">
+            <h2>Order Summary</h2>
+            <ul id="orderItems"></ul>
+            <button class="show-total-btn" onclick="showTotal()">Show Total</button>
+            <p class="total" id="totalPrice">Total Price: 0/-</p>
+            <p class="thank-you-message" id="thankYouMessage">Thank you for ordering!</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 The Boss Cafe. All Rights Reserved.
+    </footer>
+    <script>
+        const orderItems = document.getElementById('orderItems');
+        const totalPriceElem = document.getElementById('totalPrice');
+        const thankYouMessage = document.getElementById('thankYouMessage');
+        let totalPrice = 0;
+
+        function addItem(name, price) {
+            const li = document.createElement('li');
+            li.textContent = `${name} - ${price}/-`;
+            orderItems.appendChild(li);
+            totalPrice += price;
+        }
+
+        function showTotal() {
+            // Show the total price
+            totalPriceElem.textContent = `Total Price: ${totalPrice}/-`;
+            totalPriceElem.style.display = 'block';
+
+            // Show the thank-you message
+            thankYouMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
